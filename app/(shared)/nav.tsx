@@ -4,64 +4,65 @@ import {AiOutlineClockCircle, AiOutlineFolder, AiOutlineNotification, AiOutlineS
 import {BsBookmarkCheck, BsChevronRight} from 'react-icons/bs'
 import {FiHelpCircle} from 'react-icons/fi'
 import {BiChevronRight, BiLogOut, BiNotification} from 'react-icons/bi'
+import Link from 'next/link'
 
 type Props = {}
 
 const Nav = (props: Props) => {
   return (
-    <nav className=' w-60 p-4 border h-[100vh]'>
+    <nav className='hidden md:block md:w-60 p-4 border h-[100vh]'>
         <div className='flex gap-2 items-center'>
-            <img src='/rainbow.jpg' className='w-10 h-10 rounded-full' />
-            <div>
+            <img src='/rainbow.jpg' className='w-5 h-5 md:w-10 md:h-10 rounded-full' />
+            <div className=' hidden md:block'>
                 <h1 className='text-sm flex gap-2 items-center font-bold'>Avocado <BiChevronRight className='text-2xl'/></h1>
-                <p className='text-xs text-slate-500'>ibuemmanuel60@gmail.com</p>
+                <p className='text-[10px] text-slate-500'>ibuemmanuel60@gmail.com</p>
             </div>
         </div>
         <div className='flex mt-10 gap-20 flex-col justify-between'>
             <div className='flex flex-col gap-5 '>
                 <div className='flex gap-2 items-center'>
                     <MdOutlineDashboardCustomize />
-                    <span className='text-xs font-medium'>Dashboard</span>
+                    <Link href='/public'><span className='text-xs hidden md:block font-medium'>Public</span></Link>
                 </div>
                 <div className='flex gap-2 items-center'>
                     <AiOutlineFolder />
-                    <span className='text-xs font-medium'>My files</span>
+                    <Link href='/my-file'><span className='text-xs hidden md:block font-medium'>My files</span></Link>
                 </div>
                 <div className='flex gap-2 items-center'>
                     <AiOutlineClockCircle />
-                    <span className='text-xs font-medium'>Recent</span>
+                    <span className='text-xs hidden md:block font-medium'>Recent</span>
                 </div>
                 <div className='flex gap-2 items-center'>
                     <BsBookmarkCheck />
-                    <span className='text-xs font-medium'>Important</span>
+                    <span className='text-xs hidden md:block font-medium'>Important</span>
                 </div>
                 <div className='flex gap-2 items-center'>
                     <AiOutlineNotification />
-                    <span className='text-xs font-medium'>Notifications</span>
+                    <span className='text-xs hidden md:block font-medium'>Notifications</span>
                 </div>
             </div>
             <div className='flex flex-col gap-5 '>
                 <div className='flex gap-2 items-center'>
                     <FiHelpCircle />
-                    <span className='text-xs font-medium'>Help</span>
+                    <Link href='/help'><span className='text-xs hidden md:block font-medium'>Help</span></Link>
                 </div>
                 <div className='flex gap-2 items-center'>
                     <AiOutlineSetting />
-                    <span className='text-xs font-medium'>Settings</span>
+                    <span className='text-xs hidden md:block font-medium'>Settings</span>
                 </div>
                 <div className='flex gap-2 items-center'>
                     <BiLogOut />
-                    <span className='text-xs font-medium'>Log out</span>
+                    <span className='text-xs hidden md:block font-medium'>Log out</span>
                 </div>
             </div>
             <div className='flex flex-col gap-5 '>
                 <div className='flex gap-2 items-center'>
                     <MdOutlineMemory />
-                    <span className='text-xs font-medium'>Memory</span>
+                    <span className='text-xs hidden md:block font-medium'>Memory</span>
                 </div>
                 <div className='flex gap-2 items-center'>
                     <BiNotification />
-                    <span className='text-xs font-medium'>Free trial: <span>29 days left</span></span>
+                    <Link href='/pricing'><span className='text-xs hidden md:block font-medium'>Free trial: <span>29 days left</span></span></Link>
                 </div>
             </div>
         </div>    

@@ -15,11 +15,11 @@ const Folder = (props: Props) => {
         setShowDot(!showDot)
    }
   return (
-    <div className='flex gap-5'>
+    <div className='flex flex-wrap gap-5'>
         {/* ROW VIEW */}
         {folder.map((i) => (
-            <div key={i.id} className='border relative rounded-md flex flex-col justify-between  h-44 w-44'>
-                <div className={`${showDot ? getPostId == i.id ? 'flex' : 'hidden' : 'hidden'} bg-white z-30 border rounded-md absolute left-44 w-48 flex-col gap-1`}>
+            <div key={i.id} className='border relative rounded-md flex flex-col justify-between  h-36 w-36'>
+                <div className={`${showDot ? getPostId == i.id ? 'flex' : 'hidden' : 'hidden'} bg-white z-30 border rounded-md absolute left-0 top-10 w-44 flex-col gap-1`}>
                     <div className='py-2 px-5 border-b'>
                         <span className='text-xs font-semibold text-slate-700'>Preview</span>
                     </div>

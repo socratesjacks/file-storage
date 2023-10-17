@@ -1,6 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Oxanium,  } from 'next/font/google'
+import { Oxanium } from 'next/font/google'
 import Nav from './(shared)/nav'
 
 const inter = Oxanium({ subsets: ['latin'] })
